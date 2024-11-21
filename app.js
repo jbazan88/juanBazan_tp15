@@ -10,9 +10,9 @@ function mostrarPelicula(pelicula) {
     console.log(`Precio: $${pelicula.price}`);
     console.log(`Género: ${pelicula.genre}`);
     console.log('--------------------');
-  };
+};
 
-  function idDePelicula(id) {
+function idDePelicula(id) {
     const peliculaEncontrada = peliculas.find(pelicula => pelicula.id === id);
     if (peliculaEncontrada) {
         mostrarPelicula(peliculaEncontrada);
@@ -21,5 +21,7 @@ function mostrarPelicula(pelicula) {
     }
 }
 
-idDePelicula(1);
+const mensaje = fs.readFileSync('./mensaje.txt', 'utf8');
+console.log(mensaje);
 
+idDePelicula(1);
